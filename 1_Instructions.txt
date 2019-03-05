@@ -1,0 +1,9 @@
+Model simulations instructions:
+
+This script will recreate the plots in Figure 2 of the main text.
+
+1) Install the COBRA toolbox for Matlab (https://opencobra.github.io/cobratoolbox)
+2) Add the Model Simulations folder to the Matlab path.
+3) Open and run the iJB785_growth_curve.m script.
+
+Note, model simulations were performed using the Gurobi Optimizer 6.5 (http://www.gurobi.com/).

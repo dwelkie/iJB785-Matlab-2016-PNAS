@@ -1,0 +1,145 @@
+###MATLAB_SBML_STRUCTURE_FUNCTIONS\RULE
+
+
+The functions allow users to create and work with the SBML Rule structure.
+
+Function are:
+
+----------
+
+####Rule = Rule_create(level(optional), version(optional) )
+
+Takes
+
+1. level, an integer representing an SBML level (optional)
+2. version, an integer representing an SBML version (optional)
+
+Returns
+
+1. a MATLAB_SBML Rule structure of the appropriate level and version
+
+*NOTE:* the optional level and version preserve backwards compatibility
+  a missing version argument will default to L1V2; L2V4 or L3V1
+  missing both arguments will default to L3V1
+
+
+------------------------------
+
+####formula = Rule_getFormula(SBMLRule)
+
+Takes
+
+1. SBMLRule, an SBML Rule structure
+
+Returns
+
+1. the value of the formula attribute
+
+
+
+------------------------------
+
+####sboTerm = Rule_getSBOTerm(SBMLRule)
+
+Takes
+
+1. SBMLRule, an SBML Rule structure
+
+Returns
+
+1. the value of the sboTerm attribute
+
+
+
+------------------------------
+
+####value = Rule_isSetFormula(SBMLRule)
+
+Takes
+
+1. SBMLRule, an SBML Rule structure
+
+Returns
+
+1. value = 
+ - 1 if the formula attribute is set
+ - 0 otherwise
+
+
+
+------------------------------
+
+####value = Rule_isSetSBOTerm(SBMLRule)
+
+Takes
+
+1. SBMLRule, an SBML Rule structure
+
+Returns
+
+1. value = 
+ - 1 if the sboTerm attribute is set
+ - 0 otherwise
+
+
+
+------------------------------
+
+####SBMLRule = Rule_setFormula(SBMLRule, formula)
+
+Takes
+
+1. SBMLRule, an SBML Rule structure
+2. formula; a string representing the formula to be set
+
+Returns
+
+1. the SBML Rule structure with the new value for the formula attribute
+
+
+
+------------------------------
+
+####SBMLRule = Rule_setSBOTerm(SBMLRule, sboTerm)
+
+Takes
+
+1. SBMLRule, an SBML Rule structure
+2. sboTerm, an integer representing the sboTerm to be set
+
+Returns
+
+1. the SBML Rule structure with the new value for the sboTerm attribute
+
+
+
+------------------------------
+
+####SBMLRule = Rule_unsetFormula(SBMLRule)
+
+Takes
+
+1. SBMLRule, an SBML Rule structure
+
+Returns
+
+1. the SBML Rule structure with the formula attribute unset
+
+
+
+------------------------------
+
+####SBMLRule = Rule_unsetSBOTerm(SBMLRule)
+
+Takes
+
+1. SBMLRule, an SBML Rule structure
+
+Returns
+
+1. the SBML Rule structure with the sboTerm attribute unset
+
+
+
+------------------------------
+
