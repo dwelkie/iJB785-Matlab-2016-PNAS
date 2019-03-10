@@ -1,6 +1,5 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/opencobra/cobratoolbox/master/docs/source/_static/logo.png" height="160px"/>
-</p>
+
+
 
 The COBRA Toolbox <br> COnstraint-Based Reconstruction and Analysis Toolbox
 =======================================================================
@@ -31,28 +30,17 @@ The COBRA Toolbox <br> COnstraint-Based Reconstruction and Analysis Toolbox
 System Requirements and Solver Installation
 -------------------------------------------
 
-:warning: Please follow [this guide](https://github.com/opencobra/cobratoolbox/blob/master/.github/REQUIREMENTS.md) in order to configure your system properly.
+## One way to run the scripts and perform the analysis of the 2016 PNAS paper Broddrick-Rubin-Welkie on the model iJB785:
 
-The default solver is `glpk` (for `LP` and `MILP`). You can install `TOMLAB`, `IBM ILOG CPLEX`, `GUROBI`, or `MOSEK` by following these [detailed instructions](https://github.com/opencobra/cobratoolbox/blob/master/.github/SOLVERS.md).
+1. Download this repository to your local drive.
+2. Make sure you have Anaconda on your computer
+3. Make sure you have Matlab on your machine
+4. Change directory to this repos folder on your machine and create a environment:
+   1. conda env create -f environment.yml
+5. Once it established the correct environment, launch jupyter and load the notebook "Original-Simulation-Broddrick-2016-PNAS.ipynb"
+   1. If you have an error, you may need to check your matlab kernel is functioning properly.
 
-Installation
-------------
 
-1. Download this repository (the folder `./cobratoolbox/` will be created). You can clone the repository using:
-    ````bash
-    $ git clone https://github.com/opencobra/cobratoolbox.git cobratoolbox
-    ````
-    :warning: Run this command in `Terminal` (on <img src="https://prince.lcsb.uni.lu/jenkins/userContent/apple.png" height="20px" alt="macOS"> and <img src="https://prince.lcsb.uni.lu/jenkins/userContent/linux.png" height="20px" alt="Linux">) or in `Git Bash` (on <img src="https://prince.lcsb.uni.lu/jenkins/userContent/windows.png" height="20px" alt="Windows">) - **not** in <img src="https://prince.lcsb.uni.lu/jenkins/userContent/matlab.png" height="20px" alt="Matlab">. Although not recommended, you can download the repository as a [compressed archive](https://github.com/opencobra/cobratoolbox/archive/master.zip).
-
-2. Change to the folder `cobratoolbox/` and run from <img src="https://prince.lcsb.uni.lu/jenkins/userContent/matlab.png" height="20px" alt="Matlab">
-    ````Matlab
-    >> initCobraToolbox
-    ````
-
-3. You can test your installation by running from <img src="https://prince.lcsb.uni.lu/jenkins/userContent/matlab.png" height="20px" alt="Matlab">
-    ````Matlab
-    >> testAll
-    ````
 
 Tutorials
 ---------
@@ -68,23 +56,6 @@ Support and Documentation
 
 - If you need support, please feel free to post your question in our <a href="https://groups.google.com/forum/#!forum/cobra-toolbox"><img src="https://img.shields.io/badge/COBRA-forum-blue.svg"></a>.
 
-How to contribute
------------------
-
-:+1::tada: First off, thanks for taking the time to contribute to [The COBRA Toolbox](https://github.com/opencobra/cobratoolbox)! :tada::+1:
-
-<p align="center">
-<img src="https://raw.githubusercontent.com/opencobra/MATLAB.devTools/develop/assets/devTools_logo.png" height="120px"/>
-</p>
-
-:bulb: **Check out the [MATLAB.devTools](https://github.com/opencobra/MATLAB.devTools) - and contribute the smart way!**
-
-- Please follow the [Style Guide](https://github.com/opencobra/cobratoolbox/blob/master/.github/guides/STYLEGUIDE.md).
-- More information on writing a **test** is [here](https://github.com/opencobra/cobratoolbox/blob/master/.github/guides/TESTGUIDE.md) and a template is [here](https://github.com/opencobra/cobratoolbox/blob/master/.github/guides/testTemplate.m).
-- A guide for reporting an **issue** or submitting a **pull request (PR)** is [here](https://github.com/opencobra/cobratoolbox/blob/master/.github/guides/ISSUEGUIDE.md).
-
-If you want to use `git` via the command line interface and need help, these [training slides](https://uni-lu.github.io/slides/) will get you started. This [guide](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github) or the official [GitHub guide](https://help.github.com/articles/creating-a-pull-request/) also come in handy.
-
 How to cite `The COBRA Toolbox`
 ---------------
 
@@ -98,20 +69,10 @@ When citing `The COBRA Toolbox`, it is important to cite the original paper wher
 >[2] = Schellenberger J, Que R, Fleming RMT, Thiele I, Orth JD, Feist AM, Zielinski DC, Bordbar A, Lewis NE, Rahmanian S, Kang J, Hyduke DR, Palsson BØ. 2011 Quantitative prediction of cellular metabolism with constraint-based models: The COBRA Toolbox v2.0. Nature Protocols 6:1290-1307.
 >
 
-Binaries and Compatibility
----------------------------
 
-For convenience, we provide the [`SBMLToolbox 4.1.0`](http://sbml.org/Software/SBMLToolbox), and [`glpk_mex`](https://github.com/blegat/glpkmex) in `external/toolboxes`, [`libSBML-5.13.0-matlab`](http://sbml.org/Software/libSBML) in `src/io/utilities`.
-
-[Binaries](https://github.com/opencobra/COBRA.binary) for these libraries are provided in a submodule for Mac OS X 10.6 or later (64-bit), GNU/Linux Ubuntu 10.0 (64-bit), and Microsoft Windows 7 (64-bit).
-For unsupported OS, please refer to their respective building instructions ([`glpk_mex`](https://github.com/blegat/glpkmex#instructions-for-compiling-from-source), [`libSBML`](http://sbml.org/Software/libSBML/5.13.0/docs//cpp-api/libsbml-installation.html)).
-
-Read more on the compatibility with SBML-FBCv2 [here](https://github.com/opencobra/cobratoolbox/blob/master/.github/guides/NOTES.md).
 
 Disclaimer
 ----------
 
 *The software provided by the openCOBRA Project is distributed under the GNU GPLv3 or later.  However, this software is designed for scientific research and as such may contain algorithms that are associated with patents in the U.S. and abroad.  If the user so chooses to use the software provided by the openCOBRA project for commercial endeavors then it is solely the user’s responsibility to license any patents that may exist and respond in full to any legal actions taken by the patent holder.*
-# iJB785-Matlab-2016-PNAS
-# iJB785-Matlab-2016-PNAS
-# iJB785-Matlab-2016-PNAS
+
